@@ -22,6 +22,6 @@ terraform apply -auto-approve
 cd /home/ec2-user
 git clone https://github.com/swathibattula-B/roboshop-infra-dev2.git
 chown ec2-user:ec2-user -R roboshop-infra-dev2
-cd roboshop-infra-dev/90-components
+cd roboshop-infra-dev2/90-components
 terraform init
 terraform apply -auto-approve
