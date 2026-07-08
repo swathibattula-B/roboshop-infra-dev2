@@ -25,13 +25,13 @@ resource "aws_iam_role" "mysql" {
   )
 }
 
-resource "aws_iam_policy" "mysql" {
+/* resource "aws_iam_policy" "mysql" {
   name        = local.mysql_policy_name
   description = "A policy for MySQL Ec2 instance"
   policy      = templatefile("mysql-iam-policy.json", {
                 environment = var.environment
   })
-}
+} */
 
 resource "aws_iam_role_policy_attachment" "mysql" {
   role       = aws_iam_role.mysql.name
