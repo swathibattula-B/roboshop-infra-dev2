@@ -1,0 +1,20 @@
+bastion:
+-name: bastion_internet
+ port: 22
+ src: internet
+ dest: bastion 
+mongodb:
+-name: mongodb_bastion
+ port: 27017
+ src: bastion_internet
+ dest: mongodb
+
+-name: mongo_catalogue
+ port: 8080
+ src: catalogue
+ dest: mongodb
+
+-name: mongodb_user
+ port: 8080
+ src: user
+ dest: mongodb
