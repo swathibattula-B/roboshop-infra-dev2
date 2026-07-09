@@ -4,6 +4,11 @@ terraform {
       source  = "hashicorp/aws"
       version = "6.53.0"
     }
+  
+    random = {
+      source  = "hashicorp/random"
+      version = "3.6.3"
+    }
   }
   backend "s3" {
     bucket  = "remote-state-aws-88ss-dev" # Replace with your unique bucket name
