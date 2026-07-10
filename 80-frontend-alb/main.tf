@@ -69,7 +69,7 @@ resource "aws_lb_target_group" "frontend" {
 
 resource "aws_lb_listener_rule" "frontend" {
   listener_arn = local.backend_alb_listener_arn
-  priority     = 10
+  priority     = 20
 
   action {
     type             = "forward"
